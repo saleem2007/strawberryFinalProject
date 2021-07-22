@@ -7,14 +7,14 @@ const {Order} = require('./Order');
 const {User} = require('./User');
 
 
-class Sauce extends Model {}
+//creating Association between models
+Item.belongsTo(Inventory);
+Inventory.hasMany(Item);
+Item.belongsTo(Category);
+Category.hasMany(Item);
+Item.belongsTo(Order);
+Order.hasMany(Item);
+Order.belongsTo(User);
+User.hasMany(Order);
 
-Sauce.init({
-    name: DataTypes.STRING,
-    image: DataTypes.STRING,
-}, {
-    sequelize,
-    timestamps: false,
-});
-
-module.exports = {Sauce};
+module.export = { Category, Inventory, Item, Order, User };

@@ -9,6 +9,9 @@ Item.init({
     description: DataTypes.STRING,
     price: DataTypes.float(5, 2),
     image: DataTypes.STRING
-})
+}, {
+    sequelize,
+    timestamps: false
+});
 
 module.exports = { Item };

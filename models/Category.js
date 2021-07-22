@@ -5,6 +5,9 @@ class Category extends Model { }
 
 Category.init({
     name: DataTypes.STRING
-})
+}, {
+    sequelize,
+    timestamps: false
+});
 
 module.exports = { Category };

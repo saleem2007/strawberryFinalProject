@@ -7,6 +7,9 @@ Inventory.init({
     name: DataTypes.STRING,
     location: DataTypes.STRING,
     size: DataTypes.INTEGER
-})
+}, {
+    sequelize,
+    timestamps: false
+});
 
-module.exports = { Inventroy };
+module.exports = { Inventory };

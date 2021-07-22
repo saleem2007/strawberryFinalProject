@@ -8,6 +8,10 @@ User.init({
     address: DataTypes.STRING,
     phone: DataTypes.INTEGER,
     email: DataTypes.STRING
-})
+},  {
+    sequelize,
+    timestamps: false
+});
+
 
 module.exports = { User };
