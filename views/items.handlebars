@@ -1,10 +1,16 @@
-<div>
-    {{#each items}}
-        <div>
-            <a href="/items/">{{name}}</a>
-            <a href="/items/">{{price}}</a>
-            <img src="{{image}}" alt="">
-            <a href="/items/">{{description}}</a>
-        </div>
-    {{/each}}
-</div>
+<h2>{{this.name}}</h2>
+<section>
+    <article>
+            <img src={{this.image}} />
+            <br />
+            <h3>MENU:</h3>
+            {{!-- restaurant.Menus because from the sequelize query --}}
+              {{#each restaurant.Menus}}
+                <h2>{{this.title}}</h2> 
+                    {{#each this.MenuItems}}
+                        <li>{{this.name}}</li>
+                        <li>{{this.price}}</li>
+                    {{/each}} 
+              {{/each}}    
+    </article>
+</section>

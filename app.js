@@ -4,9 +4,9 @@ const expressHandlebars = require('express-handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
 
 
-const { Warehouse } = require('./models/Warehouse');
-const { Category } = require('./models/Category');
-const { Item } = require('./models/Item');
+const Warehouse = require('./models/Warehouse');
+const Category = require('./models/Category');
+const Item = require('./models/Item');
 
 const index = require('./models/index');
 index();
@@ -27,17 +27,14 @@ app.use(express.static('public'));
 
 
 
-app.get('/items', async(req, res) => {
-    const items = await Item.findAll()
-    res.render('items', { items }); //points to sauces handlebar
+app.get('/warehouses', async(req, res) => {
+    const warehouses = await Warehouse.findAll()
+    res.render('warehouses', { warehouses });
 })
 
-app.get('/item/:id', async(req, res) => {
-    const items = await Item.findByPk(req.params.id)
-    res.render('item', { items });
-})
 
-app.listen(PORT, async() => {
-    await db.sync({ force: true })
+
+app.listen(PORT, () => {
+
     console.log(`Your server is running on http://localhost:${PORT}`);
 })
