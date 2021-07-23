@@ -1,7 +1,10 @@
 <div>
-    {{#each sauces}}
+    {{#each items}}
         <div>
-            <a href="/sauces/{{id}}">Click to see {{name}}</a>
+            <a href="/items/">{{name}}</a>
+            <a href="/items/">{{price}}</a>
+            <img src="{{image}}" alt="">
+            <a href="/items/">{{description}}</a>
         </div>
     {{/each}}
 </div>
