@@ -1,14 +1,15 @@
-const {Sequelize, DataTypes, Model} = require('sequelize')
-const {sequelize} = require('../db')
+const db = require('../db')
+const { DataTypes, Model } = require('sequelize')
 
-class Order extends Model { }
+
+class Order extends Model {}
 
 Order.init({
     numItems: DataTypes.INTEGER,
     totalPrice: DataTypes.INTEGER
 }, {
-    sequelize,
+    sequelize: db,
     timestamps: false,
 });
 
-module.exports = { Order };
+module.exports = Order;

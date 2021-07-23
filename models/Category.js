@@ -1,13 +1,13 @@
-const {Sequelize, DataTypes, Model} = require('sequelize')
-const {sequelize} = require('../db')
+const db = require('../db')
+const { DataTypes, Model } = require('sequelize')
 
-class Category extends Model { }
+class Category extends Model {}
 
 Category.init({
     name: DataTypes.STRING
 }, {
-    sequelize,
+    sequelize: db,
     timestamps: false
 });
 
-module.exports = { Category };
+module.exports = Category;

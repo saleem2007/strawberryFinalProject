@@ -2,16 +2,15 @@ const db = require('../db')
 const { DataTypes, Model } = require('sequelize')
 
 
-class Item extends Model {}
+class Warehouse extends Model {}
 
-Item.init({
+Warehouse.init({
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
-    price: DataTypes.DOUBLE(5, 2),
-    image: DataTypes.STRING
+    location: DataTypes.STRING,
+    size: DataTypes.INTEGER
 }, {
     sequelize: db,
     timestamps: false
 });
 
-module.exports = Item;
+module.exports = Warehouse;

@@ -1,14 +1,14 @@
-const { sequelize } = require('../db');
-const { Category } = require('./Category');
-const { Inventory } = require('./Inventory');
-const { Item } = require('./Item');
-const { Order } = require('./Order');
-const { User } = require('./User');
+const db = require('../db');
+const Category = require('./Category');
+const Warehouse = require('./Warehouse');
+const Item = require('./Item');
+const Order = require('./Order');
+const User = require('./User');
 
 
 describe('testing 101', () => {
     beforeAll(async() => {
-        await sequelize.sync({ force: true })
+        await db.sync({ force: true })
     });
 
     test('can create a item', async() => {
@@ -57,16 +57,16 @@ describe('testing 101', () => {
 
     })
 
-    test('can create a Inventory', async() => {
-        const testInv = await Inventory.create({
+    test('can create a Warehouse', async() => {
+        const testWare = await Warehouse.create({
             name: "verizon",
             location: "irving 306",
             size: 30090
         })
 
-        expect(testInv.name).toBe("verizon")
-        expect(testInv.location).toBe("irving 306")
-        expect(testInv.size).toBe(30090)
+        expect(testWare.name).toBe("verizon")
+        expect(testWare.location).toBe("irving 306")
+        expect(testWare.size).toBe(30090)
 
     })
 

@@ -1,20 +1,22 @@
-const {Sequelize, DataTypes, Model} = require('sequelize')
-const {sequelize} = require('../db')
-const {Category} = require('./Category');
-const {Inventory} = require('./Inventory');
-const {Item} = require('./Item');
-const {Order} = require('./Order');
-const {User} = require('./User');
+const db = require('../db')
+const Category = require('./Category');
+const Warehouse = require('./Warehouse');
+const Item = require('./Item');
+const Order = require('./Order');
+const User = require('./User');
 
+async function index() {
 
-//creating Association between models
-Item.belongsTo(Inventory);
-Inventory.hasMany(Item);
-Item.belongsTo(Category);
-Category.hasMany(Item);
-Item.belongsTo(Order);
-Order.hasMany(Item);
-Order.belongsTo(User);
-User.hasMany(Order);
+    //creating Association between models
+    Category.belongsTo(Warehouse);
+    Warehouse.hasMany(Category);
+    Item.belongsTo(Category);
+    Category.hasMany(Item);
+    Item.belongsTo(Order);
+    Order.hasMany(Item);
+    Order.belongsTo(User);
+    User.hasMany(Order);
 
-module.export = { Category, Inventory, Item, Order, User };
+}
+
+module.exports = index;

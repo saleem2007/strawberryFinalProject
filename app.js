@@ -1,11 +1,15 @@
 const express = require('express');
 const Handlebars = require('handlebars');
 const expressHandlebars = require('express-handlebars');
-const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
 
-const {sequelize} = require('./db');
-const {Item} = require('./models/Item');
-const seed = require('./seed')
+
+const { Warehouse } = require('./models/Warehouse');
+const { Category } = require('./models/Category');
+const { Item } = require('./models/Item');
+
+const index = require('./models/index');
+index();
 
 const PORT = 3000;
 
@@ -21,19 +25,19 @@ app.set('view engine', 'handlebars');
 // serve static assets from the public/ folder
 app.use(express.static('public'));
 
-seed();
 
-app.get('/items', async (req, res) => {
+
+app.get('/items', async(req, res) => {
     const items = await Item.findAll()
-    res.render('items', {items}); //points to sauces handlebar
+    res.render('items', { items }); //points to sauces handlebar
 })
 
-app.get('/item/:id', async (req, res) => {
+app.get('/item/:id', async(req, res) => {
     const items = await Item.findByPk(req.params.id)
-    res.render('item', {items}); 
+    res.render('item', { items });
 })
 
-app.listen(PORT, () => {
-    sequelize.sync({force: true});
+app.listen(PORT, async() => {
+    await db.sync({ force: true })
     console.log(`Your server is running on http://localhost:${PORT}`);
 })
