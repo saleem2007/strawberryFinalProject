@@ -1,0 +1,18 @@
+
+<section>
+    <article >
+            
+            <h2>Category : {{category.name}}</h2>
+            
+              {{#each category.Items}}
+                
+                <a href="../item/{{this.id}}">{{this.name}}</a> <br>              
+              {{/each}}    
+    </article>
+     <a class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
+                    <script>
+function goBack() {
+  window.history.back();
+}
+</script> 
+</section>

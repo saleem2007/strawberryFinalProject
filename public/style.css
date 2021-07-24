@@ -14,3 +14,7 @@ h1 {
 .c {
     margin-left: 27%;
 }
+
+.return {
+    align-self: bottom right;
+}

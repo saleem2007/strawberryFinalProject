@@ -1,24 +1,22 @@
-<h2>{{warehouse.name}}</h2>
-<section>
-    <article >
-            
-            <h3>Categories:</h3>
-             {{#each warehouse.Categories}}
+<h2  style="margin-left: 13.55cm">The Categories</h2>
+<div class="container">
+  <div class="row row-cols-4">
+              {{#each categories}}
                     <div class="col">
                         <div class="card" style="width: 14rem;">
                           <div class="card-body">
                             <h5 class="card-title">Name :{{this.name}}</h5>
-                            <a href="../category/{{id}}" class="btn btn-primary">See The Items In This Category</a>
+                            <a href="category/{{id}}" class="btn btn-primary">See The Items In This Category</a>
                           </div>
                         </div> 
                        </div>
                     {{/each}} 
-               
-    </article>
-</section>
- <a class="btn btn-secondary return"  onclick="goBack()" role="button">Return Back</a>
+                     <a class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
                     <script>
 function goBack() {
   window.history.back();
 }
 </script> 
+              
+    </div>
+  </div>

@@ -31,6 +31,10 @@ app.get('/select-warehouse', async(req, res) => {
     const warehouses = await Warehouse.findAll()
     res.render('warehouse-form', { warehouses });
 })
+app.get('/warehouses', async(req, res) => {
+    const warehouses = await Warehouse.findAll()
+    res.render('warehouses', { warehouses });
+})
 
 app.get('/warehouse/:id', async(req, res) => {
     const warehouse = await Warehouse.findByPk(req.params.id, {
@@ -49,6 +53,30 @@ app.get('/warehouse/:id/items', async(req, res) => {
         }
     });
     res.render('all-items-in-warehouse', { warehouse });
+})
+
+app.get('/allitems', async(req, res) => {
+    const item = await Item.findAll(({ group: 'name' }))
+    res.render('items', { item });
+})
+
+app.get('/item/:id', async(req, res) => {
+    const item = await Item.findByPk(req.params.id, {});
+    res.render('item', { item });
+})
+
+app.get('/categories', async(req, res) => {
+    const categories = await Category.findAll(({ group: 'name' }));
+    res.render('categories', { categories });
+})
+
+app.get('/category/:id', async(req, res) => {
+    const category = await Category.findByPk(req.params.id, {
+        include: {
+            model: Item
+        }
+    });
+    res.render('category', { category });
 })
 
 
