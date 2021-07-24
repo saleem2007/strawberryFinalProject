@@ -27,14 +27,33 @@ app.use(express.static('public'));
 
 
 
-app.get('/warehouses', async(req, res) => {
+app.get('/select-warehouse', async(req, res) => {
     const warehouses = await Warehouse.findAll()
-    res.render('warehouses', { warehouses });
+    res.render('warehouse-form', { warehouses });
+})
+
+app.get('/warehouse/:id', async(req, res) => {
+    const warehouse = await Warehouse.findByPk(req.params.id, {
+        include: {
+            model: Category
+        }
+    });
+    res.render('warehouse', { warehouse });
+})
+
+app.get('/warehouse/:id/items', async(req, res) => {
+    const warehouse = await Warehouse.findByPk(req.params.id, {
+        include: {
+            model: Category,
+            include: Item
+        }
+    });
+    res.render('all-items-in-warehouse', { warehouse });
 })
 
 
 
-app.listen(PORT, () => {
 
+app.listen(PORT, () => {
     console.log(`Your server is running on http://localhost:${PORT}`);
 })

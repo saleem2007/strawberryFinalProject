@@ -1,0 +1,12 @@
+<h2>{{warehouse.name}}</h2>
+<section>
+    <article >
+            
+            <h3>Categories:</h3>
+            
+              {{#each warehouse.Categories}}
+                <h4>{{this.name}}</h4>               
+              {{/each}}    
+    </article>
+</section>
+<button><a href="{{warehouse.id}}/items" >See all Items</a></button>

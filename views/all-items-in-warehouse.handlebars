@@ -1,0 +1,33 @@
+<h2>All the Items in {{warehouse.name}}</h2>
+<section>
+    <article > 
+
+
+<div class="container">
+  <div class="row row-cols-4">
+    
+      
+              {{#each warehouse.Categories}}
+                    {{#each this.Items}}
+                    <div class="col">
+                        <div class="card" style="width: 14rem;">
+                          <img src="{{this.image}}" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Name :{{this.name}}</h5>
+                            <h5 class="card-title">Price :{{this.price}}</h5>
+                            <p class="card-text">{{this.description}}</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div> 
+                       </div>
+                    {{/each}} 
+              {{/each}} 
+   
+    </div>
+  </div>
+
+
+
+
+    </article>
+</section>

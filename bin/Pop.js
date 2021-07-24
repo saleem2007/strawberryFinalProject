@@ -9,7 +9,7 @@ const Item = require('../models/Item');
 const popDb = async() => {
     await index();
     await db.sync({ force: true });
-    const buffer = await fs.readFile(path.join(__dirname, '..', 'all.json'));
+    const buffer = await fs.readFile(path.join(__dirname, '..', 'warehouses.json'));
     const warehouses = JSON.parse(String(buffer));
     for (const warehouseData of warehouses) {
         const warehouse = await Warehouse.create(warehouseData);
