@@ -18,3 +18,7 @@ h1 {
 .return {
     align-self: bottom right;
 }
+
+#description {
+    height: 3cm;
+}
