@@ -1,9 +1,22 @@
 body {
-    background-color: lightslategray;
+  
+    background-image: url('https://as1.ftcdn.net/jpg/01/57/12/12/500_F_157121207_1mSBJ1BsKgyXqYxZUd6l6ZGRk9bSUvoL.jpg');
 }
 
 h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 60px;
     text-align: center;
+    color: darkblue;
+    background-image: url('./img/Strawberry-Download-PNG.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    margin-top: 5px;
+    text-shadow: 2px 2px red;
+    
+    
 }
 
 .b {
@@ -17,4 +30,52 @@ h1 {
 
 .return {
     align-self: bottom right;
+}
+
+#category:hover, #toggle:hover, #contact:hover, #home:hover {
+
+    background-color: red;
+    color: darkblue;
+
+}
+
+#list li {
+
+    font-size: 18px;
+    
+
+}
+
+#inventory {
+
+    font-size: 100px;
+}
+
+#sub-heading {
+
+    color: blue;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 2px 2px white;
+}
+
+#img-warehouse {
+
+   height: 150px;
+   width: auto;
+   padding: 5px;
+  
+  }
+
+#returnback {
+
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#returnback:hover {
+
+    background-color: red;
+    
 }
