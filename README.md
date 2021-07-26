@@ -1,10 +1,11 @@
-# swe-inventory-app-starter
-Boilerplate code for SWE Bootcamp Project
+Bootcamp Finel Project
 
 ## How to use 
-1. Fork this repo
-2. Check out the sample task board.
-3. npm install
-4. Find your bliss!
+1.  Fork this repo and clone it.
+2.  Download Bootstrap https://getbootstrap.com/docs/5.0/getting-started/download or npm install bootstrap
+3.  npm install
+4.  access the bin folder that contains the seeding file (pop.js)
+5.  seeding by using the command npm seed
+6.  to run your server ==> npm start
 
-Linda's Edit: :)
+## 
