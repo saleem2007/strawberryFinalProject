@@ -14,9 +14,8 @@
 
 <body>
     <h1>Welcome to StrwPro website</h1>
-    <br>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" style="margin-left: 1cm; background-color: blanchedalmond">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi bi-menu-down" viewBox="0 0 16 16">
@@ -50,9 +49,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
+                        <div  class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                               Categories
                             </button>
                             </h2>
@@ -83,22 +82,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html" style="padding-left: 2cm; padding-right: 1cm; font-size: 0.5cm">Home</a>
+                        <a id="home" class="nav-link active" aria-current="page" href="./index.html" style="padding-left: 2cm; padding-right: 1cm; font-size: 0.5cm">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-size: 0.5cm">Contact us</a>
+                        <a id="contact" class="nav-link" href="#" style="font-size: 0.5cm">Contact us</a>
                     </li>
                     <li class="nav-item dropdown">
 
                         <div class="btn-group dropend" style="font-size: 0.5cm; padding-left: 1cm">
-                            <button type="button" class="btn btn-secondary">
+                            <button id="category" type="button" class="btn btn-secondary">
                                       Categories
                                     </button>
-                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button id="toggle" type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                                       <span class="visually-hidden">Toggle Dropright</span>
                                     </button>
 
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <ul id="list" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <li><a class="dropdown-item" href="#">Men's clothing</a></li>
                                 <li><a class="dropdown-item" href="#">Woman's clothing</a></li>
                                 <li><a class="dropdown-item" href="#">Jewelry</a></li>
