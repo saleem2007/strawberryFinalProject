@@ -29,10 +29,20 @@ h1 {
     align-self: bottom right;
 }
 
+<<<<<<< HEAD
 #description {
     height: 3cm;
     background-color: red;
     color: darkblue;
+=======
+
+#category:hover, #toggle:hover, #contact:hover, #home:hover {
+
+    background-color: white;
+    color: darkblue;
+    font-weight: bold;
+
+>>>>>>> 91d62555bfa7b740789ce266e5f6df4cad0c9be1
 }
 
 #list li {
@@ -56,12 +66,289 @@ h1 {
     padding: 5px;
 }
 
+<<<<<<< HEAD
 #returnback {
     color: black;
-    font-size: 25px;
-    font-weight: bold;
+=======
+#warehousecard {
+
+    height: fit-content;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2.5px dodgerblue;
+
+
 }
 
+#warehousebtn:hover {
+
+    background-color: red;
+    font-weight: bold;
+
+}
+
+#returnhome {
+
+    color: white;
+>>>>>>> 91d62555bfa7b740789ce266e5f6df4cad0c9be1
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 350px;
+    margin-bottom: 60px;
+    background-color: blue;
+
+}
+
+#returnhome:hover {
+
+    background-color: crimson;
+
+}
+
+#items {
+
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-shadow: 1.5px 1.5px white;
+    color: red;
+    
+}
+
+<<<<<<< HEAD
 #returnback:hover {
     background-color: red;
+=======
+#items-img {
+
+    height: 250px;
+    width: auto;
+    padding: 5px;
+   
+}
+
+#items-card {
+
+    height: fit-content;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2.5px dodgerblue;
+
+
+}
+
+#itemsbutton:hover {
+
+    background-color: red;
+    color: darkblue;
+    font-weight: bold;
+
+}
+
+#returnbtn {
+
+    color: white;
+    background-color: crimson;
+    font-size: 30px;
+    margin-bottom: 60px;
+    margin-left: 420px;
+    width: 280px;
+
+}
+
+#returnbtn:hover {
+
+    background-color: darkorange;
+    color: black;
+    font-weight: bold;
+
+}
+
+#categories {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    color: crimson;
+    font-weight: bolder;
+    text-shadow: 2px 2px white;
+}
+
+#categorycard {
+
+    height: 200px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2.5px dodgerblue;
+
+}
+
+#categoriesbtn {
+
+    background-color: blue;
+    font-size: 22px;
+
+}
+
+#categoriesbtn:hover {
+
+    background-color: darkorange;
+    color: darkgreen;
+    font-weight: bold;
+    
+
+}
+
+#itemscat-btn:hover {
+
+    background-color: crimson;
+    font-weight: bold;
+
+}
+
+#side-heading {
+
+    color: blue;
+    font-size: 30px;
+    text-shadow: 2px 1px red;
+}
+
+#categories-button:hover {
+
+    background-color: crimson;
+    font-weight: bold;
+
+}
+
+#warehouses-button:hover {
+
+    background-color: crimson;
+    font-weight: bold;    
+}
+
+#items-button:hover {
+
+    background-color: crimson;
+    font-weight: bold;
+
+}
+
+#category-info {
+
+    margin-left: 20px;
+
+}
+
+#category-button {
+
+    margin-top: 30px;
+    color: darkblue;
+    background-color: orange;
+    font-size: 22px;
+    margin-left: 20px;
+    width: 250px;
+
+}
+
+#category-button:hover {
+
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+
+}
+
+#warehouse-card {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+
+}
+
+#warehouse-return {
+
+    background-color: blue;
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+
+
+}
+
+#warehouse-return:hover {
+
+    background-color: crimson;
+    font-weight: bold;
+
+}
+
+#warehouse-category:hover {
+
+    background-color: crimson;
+    font-weight: bold;
+
+}
+
+#item-return {
+
+    background-color: blue;
+    margin-top: 60px;
+    margin-left: 200px;
+    width: 180px;
+    font-size: 22px;
+
+}
+
+#item-return:hover {
+
+    background-color: red;
+    font-weight: bold;
+
+}
+
+#item-img {
+
+    height: 400px;
+    width: auto;
+
+
+}
+
+#add-item {
+
+    background-color: blue;
+    margin-top: 30px;
+    margin-left: 15px;
+    width: 180px;
+    font-size: 22px;
+
+}
+
+#return-item {
+
+    background-color: blue;
+    margin-top: 30px;
+    margin-left: 60px;
+    width: 180px;
+    font-size: 22px;
+
+}
+
+#delete-btn {
+
+    background-color: blue;
+    margin-top: 30px;
+    margin-left: 15px;
+    width: 180px;
+    font-size: 22px;
+
+}
+
+#add-item:hover, #return-item:hover, #delete-btn:hover {
+
+    background-color: crimson;
+    font-weight: bold;
+
+>>>>>>> 91d62555bfa7b740789ce266e5f6df4cad0c9be1
 }

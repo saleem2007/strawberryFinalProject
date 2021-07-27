@@ -4,14 +4,15 @@
         <div class="card mb-3" style="max-width: 1000px">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="{{item.image}}" class="img-fluid rounded-start" alt="...">
+                    <img id="item-img" src="{{item.image}}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Name :{{item.name}}</h5>
-                        <h5 class="card-title">Price :{{item.price}}</h5>
-                        <p class="card-text" >{{item.description}}</p>
+                        <h5 class="card-title fw-bold">Name: {{item.name}}</h5>
+                        <h5 class="card-title fw-bolder">Price: ${{item.price}}</h5>
+                        <p class="card-text text-success fw-bold" >{{item.description}}</p>
                     </div>  
+<<<<<<< HEAD
                     <a class="btn btn-secondary"  href="http://localhost:3000/item-form" role="button">ADD ITEM</a>
                     <a class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
                     <form action="/allitems">
@@ -42,3 +43,34 @@ fetch('http://localhost:3000/delete/'+id, {
         </div>
     </article>
 </section>
+=======
+ 
+                    <a id="add-item" class="btn btn-secondary"  href="http://localhost:3000/item-form" role="button">Add Item</a>
+                    <a id="return-item" class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
+                  
+                    
+                    <form action="/allitems">
+                         <button id="delete-btn" class="btn btn-secondary" type="submit">Delete Item</button>
+                    </form>
+                     <div id="item" style="opacity: 0">{{item.id}}</div>
+
+                    <script>
+                        function goBack() {
+                        window.history.back();
+                        }
+                        const id = document.getElementById("item").innerText;
+                        const deleteBtn = document.getElementById("delete-btn");
+                        deleteBtn.addEventListener("click",(e)=>{
+                        fetch('http://localhost:3000/delete/'+id, {
+                                method: 'DELETE'
+                            })
+                        })
+                        
+                        </script> 
+                                        
+                                        </div>        
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+>>>>>>> 91d62555bfa7b740789ce266e5f6df4cad0c9be1
