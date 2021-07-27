@@ -14,16 +14,19 @@
                     </div>  
                     <a class="btn btn-secondary"  href="http://localhost:3000/item-form" role="button">ADD ITEM</a>
                     <a class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
-                  
-                    
                     <form action="/allitems">
-    <button id="delete-btn" class="btn btn-secondary" type="submit">delete</button>
-</form>
- <div id="item" style="opacity: 0">{{item.id}}</div>
-                    <script>
+                        <button id="delete-btn" class="btn btn-secondary" type="submit">delete</button>
+                    </form>
+                    <div id="item" style="opacity: 0">{{item.id}}</div>
+<script>
+
+
 function goBack() {
   window.history.back();
 }
+
+
+
 const id = document.getElementById("item").innerText;
 const deleteBtn = document.getElementById("delete-btn");
 deleteBtn.addEventListener("click",(e)=>{

@@ -104,7 +104,17 @@ app.delete('/delete/:id', async(req, res) => {
     res.redirect("/http://localhost:3000/allitems");
 })
 
+app.get('/update/:id', async(req, res) => {
+    const item = await Item.findByPk(req.params.id, {});
+    res.render('update', { item });
+})
 
+app.put("/update/:id", async(req, res) => {
+    let update = await Item.update(req.body, {
+        where: { id: req.params.id }
+    });
+    res.send("it's working");
+})
 
 app.listen(PORT, () => {
 

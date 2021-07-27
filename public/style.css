@@ -1,5 +1,4 @@
 body {
-  
     background-image: url('https://as1.ftcdn.net/jpg/01/57/12/12/500_F_157121207_1mSBJ1BsKgyXqYxZUd6l6ZGRk9bSUvoL.jpg');
 }
 
@@ -15,8 +14,6 @@ h1 {
     height: 150px;
     margin-top: 5px;
     text-shadow: 2px 2px red;
-    
-    
 }
 
 .b {
@@ -32,31 +29,21 @@ h1 {
     align-self: bottom right;
 }
 
-<<<<<<< HEAD
 #description {
     height: 3cm;
-=======
-#category:hover, #toggle:hover, #contact:hover, #home:hover {
-
     background-color: red;
     color: darkblue;
-
 }
 
 #list li {
-
     font-size: 18px;
-    
-
 }
 
 #inventory {
-
     font-size: 100px;
 }
 
 #sub-heading {
-
     color: blue;
     font-weight: bold;
     font-size: 50px;
@@ -64,23 +51,17 @@ h1 {
 }
 
 #img-warehouse {
-
-   height: 150px;
-   width: auto;
-   padding: 5px;
-  
-  }
+    height: 150px;
+    width: auto;
+    padding: 5px;
+}
 
 #returnback {
-
     color: black;
     font-size: 25px;
     font-weight: bold;
 }
 
 #returnback:hover {
-
     background-color: red;
-    
->>>>>>> 1119bf8992757ab8ec402c36ee4ec3fb2937a9d2
 }

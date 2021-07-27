@@ -1,4 +1,5 @@
-<form action="/new-item" method="POST" >
+<form action="../../allitems" method="GET">
+<input type="hidden" name="_method" value="PUT">
     <label for="name">Item Name:</label>
     <input type="text" id="name" name="name" required><br><br>
     <label for="description">Item Description:</label>
@@ -23,12 +24,16 @@
     <option value="12">"Bob-Bob" : "Women's clothings"</option>
     <option value="13">"High-Tech" : "Electronics"</option>
     </select>
-    <button type="submit">Submit a New Item!</button>
+    <button id="update-btn" type="submit">Update Item!</button>
 </form>
-<a class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
+<div id="item" style="opacity: 1">{{item.id}}</div>
 <script>
-function goBack() {
-  window.history.back();
-}
 
+const id = document.getElementById("item").innerText;
+const updateBtn = document.getElementById("update-btn");
+updateBtn.addEventListener("click",(e)=>{
+fetch('http://localhost:3000/update/'+id, {
+        method: 'UPDATE'
+    })
+})
 </script> 
