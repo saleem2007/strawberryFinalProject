@@ -1,15 +1,15 @@
 
   
-  <h2  style="margin-left: 14.55cm">The Items</h2>
+  <h2  id="items" style="margin-left: 14.55cm">The Items</h2>
 <div class="container">
   <div class="row row-cols-4">
               {{#each item}}
                     <div class="col">
-                        <div class="card" style="width: 14rem;">
-                          <img src="{{this.image}}" class="card-img-top" alt="...">
+                        <div id="items-card" class="card" style="width: 14rem;">
+                          <img id="items-img" src="{{this.image}}" class="card-img-top" alt="...">
                           <div class="card-body">
-                            <h6 class="card-title"><strong>Name</strong> :{{this.name}}</h6>
-                            <a href="item/{{id}}" class="btn btn-primary">See this Item</a>
+                            <h6 class="card-title"><strong>Name</strong>: {{this.name}}</h6>
+                            <a id="itemsbutton" href="item/{{id}}" class="btn btn-primary">See this Item</a>
                           </div>
                         </div> 
                        </div>
@@ -17,7 +17,7 @@
               
     </div>
   </div>
- <a class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
+ <a id="returnbtn" class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
                     <script>
 function goBack() {
   window.history.back();

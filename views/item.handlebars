@@ -4,15 +4,15 @@
         <div class="card mb-3" style="max-width: 1000px">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="{{item.image}}" class="img-fluid rounded-start" alt="...">
+                    <img id="item-img" src="{{item.image}}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Name :{{item.name}}</h5>
-                        <h5 class="card-title">Price :{{item.price}}</h5>
-                        <p class="card-text" >{{item.description}}</p>
+                        <h5 class="card-title fw-bold">Name: {{item.name}}</h5>
+                        <h5 class="card-title fw-bolder">Price: ${{item.price}}</h5>
+                        <p class="card-text text-success fw-bold" >{{item.description}}</p>
                     </div>  
-                    <a class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
+                    <a id="item-return" class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
                     <script>
 function goBack() {
   window.history.back();

@@ -1,14 +1,14 @@
-<h2>{{warehouse.name}}</h2>
+<h2 class="text-dark fw-bold">{{warehouse.name}}</h2>
 <section>
     <article >
             
-            <h3>Categories:</h3>
+            <h3 class="text-danger fw-bold">Categories:</h3>
              {{#each warehouse.Categories}}
                     <div class="col">
-                        <div class="card" style="width: 14rem;">
+                        <div id="warehouse-card" class="card" style="width: 14rem;">
                           <div class="card-body">
-                            <h5 class="card-title">Name :{{this.name}}</h5>
-                            <a href="../category/{{id}}" class="btn btn-primary">See The Items In This Category</a>
+                            <h5 class="card-title fw-bold">Name: {{this.name}}</h5>
+                            <a id="warehouse-category" href="../category/{{id}}" class="btn btn-primary">See The Items In This Category</a>
                           </div>
                         </div> 
                        </div>
@@ -16,7 +16,7 @@
                
     </article>
 </section>
- <a class="btn btn-secondary return"  onclick="goBack()" role="button">Return Back</a>
+ <a id="warehouse-return" class="btn btn-secondary return"  onclick="goBack()" role="button">Return Back</a>
                     <script>
 function goBack() {
   window.history.back();
