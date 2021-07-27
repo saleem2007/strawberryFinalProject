@@ -345,3 +345,68 @@ h1 {
     font-weight: bold;
 
 }
+
+#new-item {
+
+    text-align: center;
+    font-size: 40px;
+    color: red;
+    text-shadow: 2px 2px white;
+}
+
+#description {
+
+    margin-left: 5px;
+
+}
+
+#name {
+
+    margin-left: 45px;
+}
+
+#price {
+
+    margin-left: 55px;
+}
+
+#image {
+
+    margin-left: 85px;
+}
+
+#item-form {
+
+    margin-left: 10px;
+}
+
+#itemreturn-btn {
+
+    margin: 10px 0px 10px 10px;
+    background-color: blue;
+    width: 190px;
+}
+
+#itemreturn-btn:hover {
+
+    background-color: red;
+    font-weight: bold;
+
+}
+
+#item-submit {
+
+    margin: 20px 0px 10px 2px;
+    background-color: dodgerblue;
+    color: whitesmoke;
+    font-size: 20px;
+
+}
+
+#item-submit:hover {
+
+    background-color: green;
+    color: darkblue;
+    font-weight: bold;
+
+}
