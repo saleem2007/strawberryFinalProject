@@ -1,15 +1,14 @@
-<form action="../../allitems" method="GET">
-<input type="hidden" name="_method" value="PUT">
-    <label for="name">Item Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
+<form action="/update/{{item.id}}" method="POST">
+    <label for="name" >Item Name:</label>
+    <input type="text" id="name" name="name" placeholder="{{item.name}}" required><br><br>
     <label for="description">Item Description:</label>
-    <input type="text" id="description" name="description" required><br><br>
+    <input type="text" id="description" name="description" placeholder="{{item.description}}" required><br><br>
     <label for="price">Item Price:</label>
-    <input type="number" id="price" name="price" required><br><br>
+    <input type="number" id="price" name="price" placeholder="{{item.price}}" required><br><br>
     <label for="image">Image:</label>
-    <input type="text" id="image" name="image" required><br><br>
+    <input type="text" id="image" name="image" placeholder="{{item.image}}" required><br><br>
     <label for="CategoryId">Select Warehouse and Category:</label>
-    <select name="CategoryId" class="form-select" aria-label="Default select example">
+    <select name="CategoryId" class="form-select" >
     <option value="1">"Sound" : "Men's clothing"</option>
     <option value="2">"Sound" : "Jewelery"</option>
     <option value="3">"Wish" : "Men's clothing"</option>
@@ -26,14 +25,4 @@
     </select>
     <button id="update-btn" type="submit">Update Item!</button>
 </form>
-<div id="item" style="opacity: 1">{{item.id}}</div>
-<script>
 
-const id = document.getElementById("item").innerText;
-const updateBtn = document.getElementById("update-btn");
-updateBtn.addEventListener("click",(e)=>{
-fetch('http://localhost:3000/update/'+id, {
-        method: 'UPDATE'
-    })
-})
-</script> 
