@@ -32,6 +32,7 @@ h1 {
     align-self: bottom right;
 }
 
+
 #category:hover, #toggle:hover, #contact:hover, #home:hover {
 
     background-color: white;
@@ -189,6 +190,7 @@ h1 {
     color: darkgreen;
     font-weight: bold;
     
+
 }
 
 #itemscat-btn:hover {
@@ -225,12 +227,20 @@ h1 {
 
 }
 
+#category-info {
+
+    margin-left: 20px;
+
+}
+
 #category-button {
 
     margin-top: 30px;
-    color: blue;
+    color: darkblue;
     background-color: orange;
     font-size: 22px;
+    margin-left: 20px;
+    width: 250px;
 
 }
 
@@ -295,5 +305,43 @@ h1 {
 
     height: 400px;
     width: auto;
+
+
+}
+
+#add-item {
+
+    background-color: blue;
+    margin-top: 30px;
+    margin-left: 15px;
+    width: 180px;
+    font-size: 22px;
+
+}
+
+#return-item {
+
+    background-color: blue;
+    margin-top: 30px;
+    margin-left: 60px;
+    width: 180px;
+    font-size: 22px;
+
+}
+
+#delete-btn {
+
+    background-color: blue;
+    margin-top: 30px;
+    margin-left: 15px;
+    width: 180px;
+    font-size: 22px;
+
+}
+
+#add-item:hover, #return-item:hover, #delete-btn:hover {
+
+    background-color: crimson;
+    font-weight: bold;
 
 }

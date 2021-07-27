@@ -12,15 +12,32 @@
                         <h5 class="card-title fw-bolder">Price: ${{item.price}}</h5>
                         <p class="card-text text-success fw-bold" >{{item.description}}</p>
                     </div>  
-                    <a id="item-return" class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
+ 
+                    <a id="add-item" class="btn btn-secondary"  href="http://localhost:3000/item-form" role="button">Add Item</a>
+                    <a id="return-item" class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
+                  
+                    
+                    <form action="/allitems">
+                         <button id="delete-btn" class="btn btn-secondary" type="submit">Delete Item</button>
+                    </form>
+                     <div id="item" style="opacity: 0">{{item.id}}</div>
+
                     <script>
-function goBack() {
-  window.history.back();
-}
-</script> 
-                   
-                </div>        
-            </div>
-        </div>
-    </article>
-</section>
+                        function goBack() {
+                        window.history.back();
+                        }
+                        const id = document.getElementById("item").innerText;
+                        const deleteBtn = document.getElementById("delete-btn");
+                        deleteBtn.addEventListener("click",(e)=>{
+                        fetch('http://localhost:3000/delete/'+id, {
+                                method: 'DELETE'
+                            })
+                        })
+                        
+                        </script> 
+                                        
+                                        </div>        
+                                    </div>
+                                </div>
+                            </article>
+                        </section>

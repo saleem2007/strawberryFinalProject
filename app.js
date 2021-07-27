@@ -25,6 +25,8 @@ app.set('view engine', 'handlebars');
 // serve static assets from the public/ folder
 app.use(express.static('public'));
 
+app.use(require('body-parser').urlencoded());
+
 
 
 app.get('/select-warehouse', async(req, res) => {
@@ -79,9 +81,32 @@ app.get('/category/:id', async(req, res) => {
     res.render('category', { category });
 })
 
+app.get('/item-form', (req, res) => {
+    res.render('item-form');
+})
+
+app.post('/new-item', async(req, res) => {
+    const newItem = await Item.create(req.body);
+    const founditem = await Item.findByPk(newItem.id);
+    if (founditem) {
+        res.status(201).send('NEW ITEM CREATED!!!')
+    } else {
+        console.log("NO item created")
+    }
+})
+
+
+
+app.delete('/delete/:id', async(req, res) => {
+    await Item.destroy({
+        where: { id: req.params.id }
+    });
+    res.redirect("/http://localhost:3000/allitems");
+})
 
 
 
 app.listen(PORT, () => {
+
     console.log(`Your server is running on http://localhost:${PORT}`);
 })
