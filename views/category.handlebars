@@ -2,11 +2,11 @@
 <section>
     <article id="category-info">
             
-            <h2 class="text-danger fw-bolder">Category: {{category.name}}</h2>
+            <h2 id="category" class="text-danger fw-bolder">Category: {{category.name}}</h2>
             
               {{#each category.Items}}
                 
-                <a class="text-dark fw-bold" href="../item/{{this.id}}">{{this.name}}</a> <br>              
+                <a class="text-white fw-bold fs-5" href="../item/{{this.id}}">{{this.name}}</a> <br>              
               {{/each}}    
     </article>
      <a id="category-button" class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
