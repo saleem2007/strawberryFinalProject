@@ -8,7 +8,8 @@ User.init({
     fullName: DataTypes.STRING,
     address: DataTypes.STRING,
     phone: DataTypes.INTEGER,
-    email: DataTypes.STRING
+    email: DataTypes.STRING,
+    password: DataTypes.STRING,
 }, {
     sequelize: db,
     timestamps: false

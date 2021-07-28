@@ -1,0 +1,37 @@
+<body>
+    <style>
+            div {
+                box-sizing: border-box;
+                width: 100%;
+                border: 100px solid black;
+                float: left;
+                align-content: center;
+                align-items: center;
+            }
+  
+            form {
+                margin: 0 auto;
+                width: 700px;
+            }
+        </style>
+    <h1 style="text-align: center;">REGISTRATION FORM</h1>
+    <form name="RegForm" onsubmit="return valid()" action="/submit"  method="post">
+        <p>Full Name: <input type="text" size="65" name="fullName" required/></p>
+        <br />
+        <p>Address: <input type="text" size="65" name="address"required /></p>
+        <br />
+        <p>E-mail Address: <input type="text" size="65" name="email" required/></p>
+        <br />
+        <p>Telephone: <input type="text" size="65" name="phone"required minlength="10" maxlength="10"/></p>
+        <br />
+        <p>Password: <input type="text" size="65" name="password" required minlength="8" maxlength="20"/></p>
+        <br />
+            <input type="submit" 
+                   value="send" name="Submit" />
+            <input type="reset" 
+                   value="Reset" name="Reset" />
+        </p>
+    </form>
+</body>
+
+

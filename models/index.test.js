@@ -38,12 +38,14 @@ describe('testing 101', () => {
             fullName: "michaelAinouz",
             address: "101 center",
             phone: "6822184301",
-            email: "don't call me"
+            email: "don't call me",
+            password: "hahaha"
         })
         expect(testUser.fullName).toBe("michaelAinouz")
         expect(testUser.address).toBe("101 center")
         expect(testUser.phone).toBe("6822184301")
         expect(testUser.email).toBe("don't call me")
+        expect(testUser.password).toBe("hahaha")
     })
 
     test('can create a Order', async() => {

@@ -7,7 +7,7 @@ const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-ac
 const Warehouse = require('./models/Warehouse');
 const Category = require('./models/Category');
 const Item = require('./models/Item');
-
+const User = require("./models/User");
 const index = require('./models/index');
 index();
 
@@ -116,6 +116,15 @@ app.post('/update/:id', async(req, res) => {
     let up = await Item.update(req.body, {
         where: { id: req.params.id }
     })
+    res.redirect('/allitems')
+});
+
+app.get('/reg-user', async(req, res) => {
+    res.render("register-user");
+})
+
+app.post('/submit', async(req, res) => {
+    let user = await User.create(req.body)
     res.redirect('/allitems')
 });
 
