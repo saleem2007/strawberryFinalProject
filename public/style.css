@@ -281,7 +281,6 @@ h1 {
 #delete-btn:hover {
     background-color: crimson;
     font-weight: bold;
-<<<<<<< HEAD
 
 }
 
@@ -348,6 +347,54 @@ h1 {
     color: darkblue;
     font-weight: bold;
 
-=======
->>>>>>> b95f156d873be80989f37005589415e74911db13
+
 }
+
+#update {
+
+    background-color: green;
+    margin: 20px 0px 20px 0px;
+    color: black;
+    font-size: 22px;
+
+}
+
+#update:hover {
+
+    background-color: blue;
+    font-weight: bold;
+
+}
+
+#update-form {
+
+    margin-left: 10px;
+
+}
+
+#update-item {
+
+    text-align: center;
+    font-size: 40px;
+    color: red;
+    text-shadow: 2px 2px white;
+
+}
+
+#updateitem {
+
+    background-color: blue;
+    margin-top: 30px;
+    margin-left: 60px;
+    width: 180px;
+    font-size: 22px;
+
+}
+
+#updateitem:hover {
+
+    background-color: red;
+    font-weight: bold;
+
+}
+
