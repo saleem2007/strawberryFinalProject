@@ -105,6 +105,19 @@ app.delete('/delete/:id', async(req, res) => {
 })
 
 
+app.get('/update-form/:id', async(req, res) => {
+
+    const item = await Item.findByPk(req.params.id)
+    res.render('update', { item });
+})
+
+
+app.post('/update/:id', async(req, res) => {
+    let up = await Item.update(req.body, {
+        where: { id: req.params.id }
+    })
+    res.redirect('/allitems')
+});
 
 app.listen(PORT, () => {
 
