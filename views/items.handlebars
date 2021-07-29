@@ -17,9 +17,15 @@
               
     </div>
   </div>
+  
  <a id="returnbtn" class="btn btn-secondary"  onclick="goBack()" role="button">Return Back</a>
+ <button id="home-btn" class="btn btn-secondary" onclick="goHome()">Return to Home</button>
                     <script>
 function goBack() {
   window.history.back();
+}
+
+function goHome() {
+  window.location.href = "http://localhost:3000";
 }
 </script> 
