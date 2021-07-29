@@ -11,7 +11,7 @@ const User = require("./models/User");
 const index = require('./models/index');
 index();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000
 
 const app = express();
 
@@ -101,7 +101,7 @@ app.delete('/delete/:id', async(req, res) => {
     await Item.destroy({
         where: { id: req.params.id }
     });
-    res.redirect("/http://localhost:3000/allitems");
+    res.redirect("/");
 })
 
 
@@ -116,7 +116,7 @@ app.post('/update/:id', async(req, res) => {
     let up = await Item.update(req.body, {
         where: { id: req.params.id }
     })
-    res.redirect('/allitems')
+    res.redirect('/')
 });
 
 app.get('/reg-user', async(req, res) => {
@@ -125,10 +125,10 @@ app.get('/reg-user', async(req, res) => {
 
 app.post('/submit', async(req, res) => {
     let user = await User.create(req.body)
-    res.redirect('/allitems')
+    res.redirect('/')
 });
 
-app.listen(PORT, () => {
 
+app.listen(PORT, () => {
     console.log(`Your server is running on http://localhost:${PORT}`);
 })
